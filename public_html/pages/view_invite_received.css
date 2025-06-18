@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+
+.due-date-info {
+    color: #888;
+    text-align: right; 
+}
+
+.invitation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: flex-start; 
+}
+
+.invitation-card {
+    width: 300px; 
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.invitation-card-header {
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.invitation-card-body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.attachment-box {
+    width: 100%;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.invitation-attachment {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+.invitation-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 12px;
+    color: #6BA3C1;
+    border-top: 1px solid #ddd;
+}
+
+
+.blue-card .invitation-card-header {
+    background-color: #6BA3C1; 
+}
+
+.orange-card .invitation-card-header {
+    background-color: #DF8F68; 
+}
+
+
+.group-number {
+    font-size: 14px;
+}
+
+
+.attachment-icon {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    color: #bbb;
+}
+
+.invitation-card-body p {
+    font-size: 14px;
+    color: #888;
+}

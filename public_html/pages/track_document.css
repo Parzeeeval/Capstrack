@@ -1,0 +1,265 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+ 
+.nav__btn {
+                background-color: #066BA3; /* Orange color */
+                color: white;              /* White text */
+                font-size: 16px;           /* Adjust font size as needed */
+                padding: 15px 25px;        /* Padding for the button */
+                border: none;              /* Remove border */
+                border-radius: 25px;        /* 3px corner radius */
+                text-align: center;        /* Center the text */
+                text-decoration: none;     /* Remove underline */
+                cursor: pointer;          /* Pointer cursor on hover */
+                display: inline-block;     /* Make the button behave like an inline block */
+                transition: background-color 0.3s ease; /* Smooth background color transition */
+           
+}
+    
+        
+.nav__btn:hover {
+                background-color: #045C8C; /* Slightly darker orange on hover */
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Increased width */
+    max-width: 900px; /* Set a maximum width for larger screens */
+    position: relative;
+    margin-bottom: 40px; /* Increased space below progress bar */
+    justify-content: space-between; /* Evenly space out the steps */
+}
+
+
+.num-textfield{
+    color: #ca6431;
+    font-weight: bold;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Necessary for absolute positioning of label */
+}
+
+.circle {
+    width: 60px; /* Increased circle size */
+    height: 60px; /* Increased circle size */
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Keeps the circle above the line */
+}
+
+.inner-circle {
+    width: 36px; /* Increased inner circle size */
+    height: 36px; /* Increased inner circle size */
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold;
+    color: #B0B0B0;
+}
+
+.line {
+    width: 150px; /* Increased line width */
+    height: 13px; /* Increased line height */
+    background-color: #e0e0e0;
+    flex-grow: 1; /* Allow lines to grow and fill the space evenly */
+}
+
+.completed {
+    background-color: #ca6431;
+}
+
+.line.completed {
+    background-color: #ca6431;
+}
+
+.label {
+    position: absolute;
+    top: 70px; /* Adjusted space between circle and label */
+    font-size: 18px; /* Increased font size */
+    color: #ca6431;
+    font-weight: bold;
+}
+
+#inputDiv {
+    margin: auto;
+    max-width: calc(100% - 100px); /* Adjusted width */
+    padding: 20px; /* Increased padding */
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#trackNum {
+    border-radius: 25px;
+    border: 2px solid #b3b3b3;
+    padding: 10px; /* Increased padding */
+    max-width: calc(100% - 100px); /* Adjusted width */
+    width: 100%;
+    text-align: center;
+   
+    font-size: 18px; /* Increased font size */
+}
+
+.track-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#list {
+    position: relative;
+    margin-bottom: 30px;
+    width: 80%; /* Increased width */
+    max-width: 900px; /* Set a maximum width for larger screens */
+    height: auto;
+    margin: 0 auto;   
+}
+
+#timeline {
+    width: 100%;
+    position: relative;
+    border-spacing: 20px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;  
+}
+
+#timeline::before {
+    content: "";
+    position: absolute;
+    left: 40px; /* Adjusted left spacing */
+    top: 87px; /* Adjusted top spacing */
+    height: 100%; /* Adjusted height */
+    width: 0; /* Set width to 0 as we'll use border for the line */
+    border-left: 3px dashed #848484; /* Dashed line with increased width */
+    z-index: 1;
+}
+
+
+#timeline .item {
+    padding: 0;
+    margin-left: 5.3px;
+    border: 3px solid #848484; /* Increased border thickness */
+    border-radius: 100%;
+    width: 30px; /* Increased circle size */
+    height: 30px; /* Increased circle size */
+    line-height: 30px; /* Centered text */
+    text-align: center;
+    background-color: #dadada;
+    font-family: sans-serif;
+    font-size: 16px; /* Increased font size */
+    position: relative;
+    z-index: 2;
+}
+
+#timeline .item.active {
+    border-color: #0968a2;
+    background-color: #0968a2;
+    color: white; /* Changed text color to white for visibility */
+}
+
+.active {
+    color: #0968a2;
+}
+
+/* New styles for the horizontal line */
+.separator {
+    width: 100%; /* Full width of parent */
+    height: 1px; /* Height of the line */
+    background-color: #ccc; /* Color of the line */
+    margin: 40px 0; /* Increased spacing above and below the line */
+}
+
+
+
+
+
+.track-button:hover {
+    background-color: #45a049;
+}
+
+.track-button img {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+
+
+
+#timeline {
+    width: 100%;
+}
+
+#timeline th, 
+#timeline td {
+    text-align: left; /* Align text to the left */
+    font-size: 16px; /* Font size */
+}
+
+#timeline th:nth-child(1), 
+#timeline td:nth-child(1) {
+    width: auto; /* Allow the first column to adjust automatically */
+}
+
+#timeline th:nth-child(2), 
+#timeline td:nth-child(2) {
+    width: 25%; /* Set width for the second column (Date) */
+    min-width: 150px; /* Minimum width for better display */
+}
+
+#timeline th:nth-child(3), 
+#timeline td:nth-child(3) {
+    width: 25%; /* Set width for the third column (Time) */
+    min-width: 100px; /* Minimum width for better display */
+}
+
+#timeline th:nth-child(4), 
+#timeline td:nth-child(4) {
+    width: 30%; /* Set width for the fourth column (Description) */
+    min-width: 200px; /* Minimum width for better display */
+}
+
+#timeline th {
+    font-weight: bold; /* Bold font for headers */
+}
+
+#timeline tr:nth-child(even) {
+    background-color: white; /* Alternate row color */
+}
+
+#timeline tr:hover {
+   
+}
+
+
+

@@ -1,0 +1,64 @@
+/* Style the select element itself */
+select.custom-dropdown {
+    font-size: 18px;            /* Change font size */
+    padding: 8px 12px;          /* Padding for better spacing */
+    border: 1px solid #cccccc;  /* Border color and style */
+    border-radius: 4px;         /* Rounded corners */
+    background-color: #ffffff;  /* Background color */
+    color: #333333;             /* Font color */
+    outline: none;              /* Remove default outline */
+    width: 100%;                /* Full width */
+    appearance: none;           /* Remove default dropdown arrow (if needed) */
+    cursor: pointer;            /* Change cursor to pointer */
+}
+
+/* Optional: Add a custom arrow */
+
+
+/* Style each option within the dropdown */
+select.custom-dropdown option {
+    padding: 10px;              /* Add padding to options for spacing */
+    font-size: 18px;            /* Change option font size */
+    font-weight: bold;
+    margin: 4px 0;              /* Add gap between options */
+    background-color: #ffffff;  /* Option background color */
+    color: #333333;             /* Option font color */
+   
+}
+
+select.custom-dropdown option:last-child {
+    border-bottom: none;
+}
+
+/* Add hover effect on options (for some browsers) */
+select.custom-dropdown option:hover {
+    background-color: #f0f0f0;  /* Change background on hover */
+}
+
+
+
+
+
+
+.profile-tabs {
+    display: flex;
+    border-bottom: 1px solid #DEDEDE;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 12px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.tabs .active {
+    border-bottom: 3px solid #066BA3;
+    color: #066BA3;
+}
+
+

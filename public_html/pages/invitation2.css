@@ -1,0 +1,270 @@
+
+
+/* Modal container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); /* Background color */
+}
+
+.modal-content {
+    position: relative;
+    width: 80%; 
+    height: 80%; 
+    margin: auto; 
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.close-button {
+    position: absolute; 
+    right: 300px;  /* Moved further to the right */
+    top: 3px;    /* Adjusted vertical position */
+    font-size: 2rem;  /* Increased size */
+    color: pink;   /* Default color set to red */
+    cursor: pointer; 
+}
+
+.close-button:hover {
+    color: red; 
+}
+
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.group-info {
+    font-weight: 600;
+    color: #666;
+    margin: 5px 0;
+}
+
+.paneltitle-info {
+    font-weight: 600;
+    color: #333;
+}
+
+.semester-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.semester-info {
+    color: #888;
+}
+
+.submitted-date-info {
+   
+    text-align: right; 
+}
+.due-date-info {
+    color: #B0B0B0;
+    text-align: right;
+    margin-top: -15px; 
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.left-side {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.right-side {
+    flex: 1;
+ 
+}
+
+.document-template {
+    background-color: #f1f1f1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #8a8686;
+}
+
+.comments-section {
+    margin-bottom: 20px;
+}
+
+.comments-section label {
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 1px;
+}
+
+.comments-section textarea {
+    width: 97.5%;
+    font-size: 16px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    font-family: 'Lexend', sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+    overflow-y: auto;
+      max-width: 100%;
+}
+
+.button-comment-container {
+    text-align: center;
+}
+
+.file-upload {
+    height: 200px;
+    border: 2px dashed #ccc;
+    padding: 40px;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.file-upload label {
+    font-weight: 700;
+    color: #888;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.file-upload i {
+    font-size: 30px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+
+.submit-info-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-comment,
+.button-upload,
+.button-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.button-comment {
+    background-color: #494949;
+      padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+
+    position: relative;
+    top: -70px; /* Moves down */
+}
+
+.button-upload {
+    background-color: #066BA3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+
+    position: relative;
+    top: -70px; /* Moves down */
+    
+}
+
+
+.button-submit {
+    background-color: #066BA3;
+      padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+
+    position: relative;
+    top: -70px; /* Moves down */
+}
+
+.button-comment:hover,
+.button-upload:hover,
+.button-submit:hover {
+    opacity: 0.85;
+}
+
+.document-tracking {
+    font-weight: 700;
+    color: #888;
+    text-align: left;
+    margin-top: 80px;
+      color: green;
+     
+}
+
+.accepted-text {
+    margin-top: 10px;
+    color: green; 
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: -40px; /* Adjust this value to move it up */
+}
+
+
+
+.not-accepted-text {
+    margin-left: 10px; 
+    margin-top: 10px;
+    color: #ff0000; 
+    font-weight: bold;
+    font-size: 20px;
+     position: relative;
+    top: -67px; /* Moves down */
+   
+}
+

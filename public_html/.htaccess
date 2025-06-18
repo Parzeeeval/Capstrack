@@ -1,0 +1,12 @@
+# .htaccess
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW HOTLINKID:32ZLaqhpNC
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?capstrack.tech/.*$      [NC]
+RewriteRule .*\.(php|html)$ http://capstrack.tech/404 [R,NC]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE 32ZLaqhpNC:HOTLINKID
+

@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.create-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 15px; /* Adjust space between buttons */
+    position: relative; /* If you need to position the container */
+    margin-bottom: 30px;
+    padding-left: 20px; /* Optional: space from the left edge */
+}
+
+
+.card-container {
+    caret-color: transparent; /* Hides the caret */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 37.5px; /* Increased gap by 50% */
+    justify-content: center;
+}
+
+.card {
+    user-select: none; /* Prevent text selection */
+    position: relative;
+    width: 450px; /* Increased width by 50% */
+    height: 400px; /* Increased height by 50% */
+  
+    border-radius: 8px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    color: white;
+    overflow: hidden;
+}
+
+.title{
+    color: white;
+    
+    font-weight: bold;
+}
+
+.dropdown-container{
+    display: flex; 
+    flex-direction: row;
+    gap: 20px;
+    align-items: center; 
+    justify-content: center;
+}
+
+.dropdowns {
+    font-size: 16px; /* Slightly smaller font for a more balanced look */
+    padding: 8px 12px; /* More padding for comfortable clicking */
+    background-color: white; /* Light blue background */
+    color: black; /* Text color */
+    border: 1px solid black; /* Border color to match or complement background */
+    border-radius: 5px; /* Slight rounding for a smoother look */
+    border-color: #B0B0B0;
+    cursor: pointer; /* Show pointer to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.dropdowns:hover {
+    background-color: white; /* Slightly darker blue on hover */
+}
+
+.dropdowns option {
+  
+    color: black; /* Text color for options */
+}
+
+.dropdowns option:checked {
+    background-color: #DF8F68; /* Change checked option background */
+    color: white; /* Optional: contrast for checked text */
+}
+.groupNum{
+    color: white;
+}
+
+.divider {
+    height: 3px;  /* Adjust thickness */
+    background-color: white;  /* Line color */
+    margin-bottom: 10px;
+    border: none;
+}
+
+.custom-title {
+    color: black;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    
+    text-decoration-color: black;
+    margin: 0;
+    padding: 10px;
+    z-index: 100;
+}
+
+.create-button {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.create-btn-design {
+    color: white;
+    font-size: 50px;
+    margin-top: 20px;
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    border-radius: 50%; /* Make it circular */
+    background-color: #41A763; /* Background color */
+    border: none; /* Remove default border */
+    display: flex; /* Center text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.create-btn-design:hover {
+    background-color: #277542; /* Darken background on hover */
+}
+
+.create-button2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.create-btn-design2 {
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 120px; /* Set width */
+    height: 50px; /* Set height */
+    border-radius: 15%; /* Make it circular */
+    background-color: #41A763; /* Background color */
+    border: none; /* Remove default border */
+    display: flex; /* Center text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.create-btn-design:hover {
+    background-color: #277542; /* Darken background on hover */
+}
+
+
+.options {
+    position: absolute;
+    top: 15px; /* Adjusted for larger size */
+    right: 15px;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 10px; /* Adjust the width for the dots */
+    height: 40px; /* Adjust the height for the space between dots */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space the dots evenly */
+    align-items: center; /* Center the dots horizontally */
+}
+
+.hamburger .dot {
+    width: 8px; /* Adjusted width for circular dots */
+    height: 8px; /* Adjusted height for circular dots */
+    background-color: white; /* Dot color */
+    border-radius: 50%; /* Makes the shape circular */
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px; /* Adjusted for larger size */
+    right: 0;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 18px 27px; /* Increased padding by 50% */
+    background-color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 24px; /* Increased font size by 50% */
+    color: #007bff;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.folder-bottom {
+    position: absolute;
+    bottom: 15px; /* Adjusted for larger size */
+    right: 160px;
+    width: 100%; /* Increased width by 50% */
+    height: 80.5px; /* Increased height by 50% */
+    background-color: #9DCDE8;
+    border-radius: 22.5px; /* Increased border-radius by 50% */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 22.5px; /* Increased padding by 50% */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle {
+    width: 36px; /* Increased width by 50% */
+    height: 36px; /* Increased height by 50% */
+    background-color: #6BA3C1;
+    border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0.5, 0.5, 0.5, 0);
+}
+.folder-bottom2 {
+    position: absolute;
+    bottom: 15px; /* Adjusted for larger size */
+    right: 160px;
+    width: 120%; /* Increased width by 50% */
+    height: 80.5px; /* Increased height by 50% */
+    background-color: #D4C6FF;
+    border-radius: 22.5px; /* Increased border-radius by 50% */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 22.5px; /* Increased padding by 50% */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle2 {
+    width: 36px; /* Increased width by 50% */
+    height: 36px; /* Increased height by 50% */
+    background-color: #B2A4DD;
+    border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0.5, 0.5, 0.5, 0);
+}
+.folder-bottom3 {
+    position: absolute;
+    bottom: 15px; /* Adjusted for larger size */
+    right: 160px;
+    width: 120%; /* Increased width by 50% */
+    height: 80.5px; /* Increased height by 50% */
+    background-color: #F5B697;
+    border-radius: 22.5px; /* Increased border-radius by 50% */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 22.5px; /* Increased padding by 50% */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle3 {
+    width: 36px; /* Increased width by 50% */
+    height: 36px; /* Increased height by 50% */
+    background-color: #DF8F68;
+    border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0.5, 0.5, 0.5, 0);
+}
+.folder-bottom4 {
+    position: absolute;
+    bottom: 15px; /* Adjusted for larger size */
+    right: 160px;
+    width: 120%; /* Increased width by 50% */
+    height: 80.5px; /* Increased height by 50% */
+    background-color: #DA72AA;
+    border-radius: 22.5px; /* Increased border-radius by 50% */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 22.5px; /* Increased padding by 50% */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle4 {
+    width: 36px; /* Increased width by 50% */
+    height: 36px; /* Increased height by 50% */
+    background-color: #A65A83;
+    border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0.5, 0.5, 0.5, 0);
+}
+.course-content {
+    position: absolute;
+    top: 37.5px; /* Increased top margin by 50% */
+    left: 37.5px;
+    right: 37.5px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.course-content h2 {
+    font-size: 33px; /* Increased font size by 50% */
+    margin: 0;
+}
+
+.course-content p {
+    font-size: 24px; /* Increased font size by 50% */
+    margin: 12px 0 0; /* Increased margin by 50% */
+}
+.result-container h2{
+    margin-bottom: -115px;
+}

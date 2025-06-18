@@ -1,0 +1,457 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+
+
+.calendar-wrapper{
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+  font-weight: bold;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  font-weight: bold;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 18px;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+   font-size: 18px;
+  color: black;
+  padding: 10px;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+   font-size: 18px;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+  padding: 5px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: #D1642E;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+
+.material-symbols-rounded
+{
+  font-size: 5px;
+}
+
+.chart-heading {
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    font-weight: bold;
+    margin-top: -5px; /* Adjust this value to control the space below */
+}
+
+.chart-container {
+   
+    margin-right: 30px;
+    width: 250px;
+    justify-content: center; /* Center the chart */
+    align-items: center;
+  
+}
+
+.title-dropdown{
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: 15px;
+    top: 5px;
+    left: 10px;
+  
+}
+
+.title-dropdown select {
+    font-size: 18px;
+    padding: 5px;
+    width: 25%; /* Make the dropdown fill the width of the card */
+    border-radius: 5px;
+    
+    margin-top: 5px;
+
+}
+
+
+
+
+option {
+    font-weight: normal;
+    display: block;
+    padding-block-start: 0px;
+    padding-block-end: 1px;
+    min-block-size: 1.2em;
+    padding-inline: 2px;
+    white-space: nowrap;
+}
+
+.hover-effect {
+    background-color: #e6f4ea; /* Light green background */
+    transform: scale(1.15); /* Scale effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+
+
+.chart-legends li{
+    font-size: 14px;
+    padding: 3px;
+    margin: 1px;
+    list-style-type: disc; /* Adds bullet points */
+   
+}
+
+.chart-outputs {
+    /* Optional: Add some padding and background to the parent container */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.chart-outputs li {
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-style: solid;
+    color: #000000;
+    font-size: 18px;
+    padding: 10px 15px; /* More padding for better spacing */
+    margin: 4px 0; /* Vertical margin for separation */
+    list-style-type: none; /* Remove default bullets */
+    background-color: white; /* White background for list items */
+    border-left: 5px solid #cdcdcd; /* Left border to add visual interest */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+}
+
+.chart-outputs li::before {
+    content: ''; /* Empty content for the bullet */
+    position: absolute; /* Position it absolutely within the li */
+    left: 0; /* Align to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    width: 10px; /* Width of the bullet */
+    height: 10px; /* Height of the bullet */
+    border-radius: 50%; /* Makes it circular */
+  
+    transition: transform 0.3s ease; /* Smooth transition for the bullet */
+}
+
+.chart-outputs li:hover {
+    background-color: white; /* Light green background on hover */
+    transform: scale(1.15); /* Scale effect for both height and width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+     color: #000000;
+}
+
+.chart-outputs li:hover::before {
+    transform: translateY(-50%) scale(1.2); /* Enlarge bullet on hover */
+}
+
+
+.icon-container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center;     /* Centers the content vertically */
+    gap: 8px; /* Space between elements */
+}
+
+.status {
+    margin-right: 8px;
+}
+
+.icon {
+    display: none;
+    width: 25px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    text-align: center;
+    line-height: 8px; /* Center text vertically */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.icon.add {
+      border-color: transparent;
+    background-color: #4CAF50; /* Green background */
+    display: none;
+    color: white;
+}
+
+.icon.remove {
+    border-color: transparent;
+    background-color: #f44336; /* Red background */
+    display: none;
+    color: white;
+}
+
+
+
+
+
+.no-results {
+    position: relative; /* Relative positioning for the message */
+}
+
+.no-results-message {
+    position: absolute; /* Absolutely position this within the parent */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    font-size: 24px; /* Size of the text */
+    color: #888; /* Text color */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width within the cell */
+    background-color: white; /* Optional: background color */
+    padding: 20px; /* Optional: space around the text */
+    z-index: 1; /* Ensure it sits on top */
+}
+
+
+/* Table Styles */
+.table-container {
+  
+    border-collapse: collapse; /* Merge borders */
+    width: 100%; /* Full width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners work */
+}
+
+/* Table Header Styles */
+.table-header {
+    background-color: #ffffff; /* Header background color */
+    color: #000000; /* Header text color */
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Padding for header cells */
+    font-weight: bold; /* Bold header text */
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Table Cell Styles */
+.table-cell {
+
+    padding: 10px; /* Padding inside cells */
+   font-size: 18px;
+    font-weight: bold;
+  
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Row Styles */
+.table-row {
+    transition: background-color 0.3s; /* Smooth transition for row background color */
+}
+
+
+
+
+
+.table-row:hover {
+    background-color: #e8f5e9; /* Change background color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .table-container {
+        display: block; /* Make the table block on small screens */
+        overflow-x: auto; /* Enable horizontal scroll */
+    }
+
+    /* Adjust header and cell padding for smaller screens */
+    .table-header, .table-cell {
+        padding: 10px; /* Reduced padding */
+        font-size: 18px;
+    }
+}
+
+/* Additional Styles for Visual Appeal */
+.table-header, .table-cell {
+   width: 200px;
+}
+
+.table-header {
+    border-bottom: 2px solid #eeeeee; /* Bottom border for headers */
+}
+
+/* Optional: Add a light border for the table */
+.table-container {
+    border: 1px solid #ddd; /* Light border around the table */
+}
+
+
+.report-table {
+    width: 100%;
+   
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+   
+}
+
+.report-table thead tr {
+    background-color: #f3f3f3;
+    color:#000000;
+    text-align: left;
+}
+
+.report-table th, .report-table td {
+
+    border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+    font-weight: 600;
+}
+
+.report-table td {
+    color: #333;
+}
+
+.report-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.status.coordinated {
+    color: #066ba3;
+}
+
+.status.paneled {
+    color: #D1642E;
+}
+
+.status.advised {
+
+    color: #066ba3;
+}
+
+.report-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.icon-container i {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.icon-container .fa-pen {
+    color: #066BA3;
+}
+
+.icon-container .fa-trash {
+    color: #D96262; 
+}
+
+.pagination .current {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #1f6099; 
+}
+.pagination {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    color: #1f6099;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}

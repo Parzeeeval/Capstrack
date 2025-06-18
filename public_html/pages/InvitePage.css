@@ -1,0 +1,232 @@
+.button-container {
+    display: block; /* Align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+   margin: 20px;
+   
+    font-size: 20px;
+      border: 1px solid #ccc; /* Border color for outer circle */
+      border-radius: 5px;
+      width: 25%;
+}
+
+.label{
+    display: flex;
+    justify-content: flex-start; /* Align children to the start (left) */
+    margin-bottom: 2px;
+}
+.label h3 {
+   margin-bottom: 12px ;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 10px; /* Add padding for a larger clickable area */
+   
+    cursor: pointer;
+    color: #004170; /* Icon color */
+    font-size: 20px; /* Icon size */
+    transition: transform 0.2s; /* Smooth hover effect */
+   
+    align-items: center; /* Center icons and text vertically */
+}
+
+.icon-button i {
+    margin-right: 5px; /* Space between icon and label */
+}
+
+.icon-button span {
+    font-size: 16px; /* Adjust label size */
+}
+
+.icon-button:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    gap: 1rem;
+    margin-bottom: 20px;
+    padding:20px;
+}
+/* Main content layout */
+.invite-header {
+    margin-left: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Increased size */
+}
+
+.invite-radio-buttons {
+    
+    justify-content: center;
+    gap: 40px; /* Increased gap for better spacing */
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.invite-label {
+    font-size: 1.2rem; /* Increased label size */
+    color: #34495e;
+ 
+}
+
+.invite-input-radio {
+    margin-right: 12px;
+}
+
+.invite-section-box {
+    text-align: center;
+   
+}
+
+.invite-section-input {
+    font-size: 1.2rem; /* Increased input size */
+    padding: 10px;
+    width: 270px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.invite-section-input:focus {
+    border-color: #3498db;
+}
+
+.invite-section-select {
+    font-size: 1.2rem; /* Increased size for consistency */
+    padding: 10px;
+    width: 100%;
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.Right{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: auto;
+}
+
+.upload-box{
+    width: 75%;
+   
+    border: 2px dashed #b0b0b0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: #EAEAEA;
+}
+.invite-file-input{
+    display: none;
+}
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.icon {
+    margin-bottom: 10px;
+    color: #066BA3;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+.align-buttons{
+    position:absolute;
+    bottom: -60px;
+    display: flex;
+   
+    gap: 1rem;
+}
+.invite-button {
+    background-color: #066BA3;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Increased button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.upload-button {
+    background-color: #41A763;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Increased button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+.upload-button .invite-button{
+    margin-top:10px;
+}
+.upload-button:hover {
+    background-color: #46845B;
+}
+.invite-button:hover {
+    background-color: #295872;
+}
+
+
+
+
+
+
+/* Table styling */
+.invite-table-container {
+    margin-top: 35px;
+    display: flex; /* Hidden by default */
+    overflow-x: auto;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 14px 18px; /* Larger padding for better spacing */
+    text-align: left;
+}
+
+th {
+    background-color:  #066BA3; /* Restored header color */
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem; /* Slightly larger for emphasis */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+td[contenteditable="true"]:focus {
+    background-color: #e0f7fa;
+}

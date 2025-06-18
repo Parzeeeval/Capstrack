@@ -1,0 +1,374 @@
+
+.accounts-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(112, 112, 112, 0.2);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Lexend', sans-serif;
+}
+
+#content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    padding-bottom: 4px;
+    position: relative;
+    border-bottom: 2px solid #DEDEDE;
+}
+
+.accounts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.student-section label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.student-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.student-box {
+    background-color: #f0f0f0;
+    padding: 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    color: #494949;
+   
+}
+
+.student-box i {
+    font-size: 30px;
+    color: gray;
+}
+
+.student-box p {
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.student-access-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.access-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.access-group .access-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.access-group select,
+.search-access-section select,
+.input-group input,
+.input-group select {
+    height: 48px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.access-group select {
+    background-color: #E2FFE7;
+}
+
+.search-access-section label,
+.input-group label {
+    font-weight: bold;
+}
+
+.access-group label {
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.btn-transfer {
+    height: 48px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: #D1642E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.btn-transfer i {
+    margin-right: 5px;
+}
+
+.search-access-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.search-access-section div {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-access-section label {
+    margin-bottom: 5px;
+}
+
+.search-box {
+    position: relative;
+    width: 250px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.search-box input {
+    padding-left: 30px;
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #66afe9;
+}
+
+
+.search-user{
+    font-size: 20px;
+}
+
+.accounts-body {
+    display: flex;
+    gap: 20px;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input-group select {
+    height: 48px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.input-group label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.accounts-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.action-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #066BA3;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #333;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #055b88;
+}
+
+.btn-cancel:hover {
+    background-color: #232323;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 95%;
+    max-width: 600px;
+}
+
+.modal-content h2 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: -30px;
+}
+
+.modal-content p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-input {
+    margin-bottom: 15px;
+}
+
+.modal-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.modal-input input {
+    width: 100%;
+    height: 48px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-transfer-confirm,
+.btn-cancel-modal {
+    height: 48px;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-transfer-confirm {
+    background-color: #066BA3;
+    color: white;
+}
+
+.btn-cancel-modal {
+    background-color: #D96262;
+    color: white;
+}
+
+.btn-transfer-confirm:hover {
+    background-color: #00476e;
+}
+
+.btn-cancel-modal:hover {
+    background-color: #a23535;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 48px;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 16px;
+    pointer-events: none;
+}

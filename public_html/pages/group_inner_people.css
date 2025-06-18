@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.divider {
+    height: 5px;  /* Adjust thickness */
+    background-color: #ccc;  /* Line color */
+    margin: 20px 0;  /* Adjust spacing around the line */
+    border: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flat-button {
+    background-color: lightgray;
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Add padding for a better click area */
+    font-size: 11px; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer */
+    color: #333; /* Text color */
+    outline: none; /* Remove outline on focus */
+    display: inline-block; /* Ensure it covers the entire width */
+}
+
+/* Optional: add a hover effect */
+.flat-button:hover {
+   background-color: red;
+   color: white;
+}
+
+.add-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+.people-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.person:last-child {
+    border-bottom: none;
+}
+
+.name {
+    font-size: 16px;
+}
+
+.hamburger {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.hamburger:hover {
+    color: #000;
+}
+
+/* Style for dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size: 11px;
+    background-color: lightgray;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.hamburger {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

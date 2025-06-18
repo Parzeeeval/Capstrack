@@ -1,0 +1,452 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+
+
+.card-container{
+    background:#fff;/*#ECF0F1;*/
+  
+    border-radius: 10px;
+   
+}
+
+ 
+.div-bar{
+    height: 5px;  /* Thickness of the line */
+    width: 100%;  /* Full width of the container */
+    background-color: #546E7A;  /* Line color (change as needed) */
+    margin-bottom: 20px;  /* Optional: adds space above and below the line */
+    border-radius: 5px;  /* Optional: rounds the edges of the line */
+}
+
+.card-border{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*left 25, middle 50 right 25*/
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .card-border {
+        grid-template-columns: 1fr; /* Stack all items on top of each other */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .card-border {
+        grid-template-columns: 1fr 1fr; /* 2 columns for medium screens */
+    }
+}
+
+.card-wrapper-column{ /*LEFT MOST PART OF THE DIV, ACCOUNTS*/
+    display: flex;
+    flex-direction:column;
+    /*flex-wrap:wrap WRAPS THE CONTENT IN A HORIZONTAL MANNER //ROW */
+    gap: 1rem;
+     font-size: 18px;
+    /*width:300px;*/
+}
+.card-active-acc{
+    background-color: #eeeeee;
+    border-radius: 10px; 
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    width: 100%;
+    height: auto;   
+    display: flex;
+    color: #000000; 
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+   
+}
+.card-header{
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+    margin-bottom: 0px;
+}
+.card-acc{
+    display: flex;
+    justify-content: center; /* Space between title and value */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.title{
+    font-size: 16px;
+    font-weight: 600;
+}
+.acc-value{
+   font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    text-align:right;
+    margin-left: auto; 
+    white-space: nowrap;
+}
+
+
+.card-pending-acc{
+    background: #eeeeee;/* #F1C40F;#2E2E2E*/ 
+    border-radius: 10px;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    width: 100%;
+    height: auto;   
+    display: flex;
+    color: #000000; 
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+ 
+}
+.card-suspended-acc{
+    background: #eeeeee;
+    border-radius: 10px;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    width: 100%;
+    height: auto;   
+    display: flex;
+    color: #000000; 
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+   
+}
+.card-active-acc:hover{
+    transform: translateY(-3px);
+}
+.card-pending-acc:hover{
+    transform: translateY(-3px);
+}
+.card-suspended-acc:hover{
+    transform: translateY(-3px);
+}
+
+.card-wrapper-flex-wrap{ /*MIDDLE PART OF THE DIV, PIE CHARTS*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    /*flex-wrap:wrap WRAPS THE CONTENT IN A HORIZONTAL MANNER //ROW */
+}
+.card-pie-chart-title-eval{
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-color: #ffffff;
+    border-style: solid;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+    width: 100%;
+    height: 100%;   /*to modify, tantsahan lang nangyari*/
+    display: flex;
+    flex-direction: column;
+    color: #000000; 
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.20)
+}
+
+.card-wrapper-column-2{   /*RIGHT MOST PART OF THE DIV, ACAD YR + ANNOUNCEMENTS*/
+    display: flex;
+    flex-direction:column;
+    /*flex-wrap:wrap WRAPS THE CONTENT IN A HORIZONTAL MANNER //ROW */
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-self: flex-start;
+    gap: 1rem;
+  
+    /*width:300px;*/
+}
+
+.card-wrapper-column-3{   /*RIGHT MOST PART OF THE DIV, ACAD YR + ANNOUNCEMENTS*/
+    display: flex;
+    flex-direction:column;
+    /*flex-wrap:wrap WRAPS THE CONTENT IN A HORIZONTAL MANNER //ROW */
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-self: flex-start;
+    gap: 1rem;
+    /*width:300px;*/
+}
+
+.card-academicyr-acc{
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 10px;
+    border:none;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    width: 100%;
+    height: 100%;   
+    display: flex;
+    color: #000000; 
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.20)
+}
+.card-academicyr-acc:hover{
+    transform: translateY(-3px);
+}
+.card-acadyr{
+    align-items: center;
+}
+
+
+.collapsible { /*BUTTON*/
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-color: #ffffff;
+    border-style: solid;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    height: 50px;
+    
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: -7px;
+    font-weight: bold;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.20);
+}
+
+.collapsible:hover {
+    background-color: #eeeeee;
+}
+
+
+.collapsible:after {
+    content: '\25BC';
+    color: #d1642e;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+   
+}
+
+.content-collapsible {
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-color: #ffffff;
+    border-style: solid;
+    padding: 15px;
+    display: none; 
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    margin-top: -1px;
+    min-height: 150px; 
+}
+.button-container {
+    display: flex;            
+    justify-content: flex-end; 
+    margin-top: 50px;      
+}
+.card-table-faculty{
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-color: #ffffff;
+    border-style: solid;
+    border:none;
+    color: #000000;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    height: auto;
+     font-size: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: -7px;
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    width: 70%;  /* Adjust width based on how much space you want the progress bar to take */
+   
+    border-radius: 5px;
+    height: 10px;  /* Adjust height if needed */
+    margin-left: 5px;  /* Add some space between the button text and progress bar */
+    position:relative;
+}
+
+.card-accounts-statuses{
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 10px;
+    border:none;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    width: 100%;
+    height: 100%;  
+    display: flex;
+    color: #000000; 
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.20)
+}
+
+.card-announcements{
+    background: #fff;/* #F1C40F;#2E2E2E*/ 
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 10px;
+    border: none;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    width: 100%;
+    height: 100%;  
+    display: flex;
+    color: #EEEEEE; 
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.20)
+}
+.announce-value{
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1;
+    text-align:left;
+    margin-left: auto; 
+    
+}
+
+.announce-area {
+  
+    width: 100%;            /* Full width */
+    height: 300px;          /* Initial height */
+    max-height: 300px;     /* Maximum height */
+   
+    resize: vertical;      /* Allow vertical resizing only */
+    overflow: auto;        /* Allow scrolling if content overflows */
+    transition: height 0.3s ease; /* Smooth transition for height change */
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;           /* Padding for better spacing */
+    box-sizing: border-box;  /* Include padding in width and height calculations */
+}
+
+.announcement-header-container {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically align items */
+    gap: 8px; /* Optional: Add space between the icon and text */
+}
+
+.announcement-header-container i {
+    font-size: 20px; /* Adjust icon size */
+    color: #000; /* Optional: Change icon color */
+}
+
+.title {
+    font-size: 16px; /* Adjust font size for the header */
+    color: #333; /* Optional: Change text color */
+}
+
+
+
+.card-acc {
+    display: flex;
+    flex-direction: row; /* Arrange content in a row (left to right) */
+    justify-content: center; /* Space between the left and right sections */
+    align-items: center; /* Vertically center the elements */
+    width: 100%;
+}
+
+.card-announce {
+    display: flex;
+    position: relative;
+    flex-direction: column; /* Arrange content in a row (left to right) */
+    justify-content: space-between; /* Space between the left and right sections */
+    align-items: normal; /* Vertically center the elements */
+    width: 100%;
+}
+
+.announce-button{
+    margin-top: 15px;
+    padding: 10px 10px;
+    background-color: #066ba3;
+    color: #ffffff;
+    border: none;
+       border-radius: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+.chart-legends li {
+    font-size: 14px;
+    /*margin: 3px;*/
+    list-style-type: none;
+    position: relative;
+    padding-left: 25px; /* Adjust padding to accommodate larger bullets */
+    transition: color 0.3s;
+}
+
+/* Custom bullet points */
+.chart-legends li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-size: 28px; /* Increase bullet size */
+     line-height: 1; /* Align bullet with text line-height */
+}
+
+/* Bullet colors for different statuses */
+.chart-legends li:nth-child(1)::before {
+    color: #2E7D32;
+}
+
+.chart-legends li:nth-child(2)::before {
+    color: #2E7D32;
+}
+
+.chart-legends li:nth-child(3)::before {
+    color: #EF6C00;
+}
+
+.chart-legends li:nth-child(4)::before {
+    color: #EF6C00;
+}
+
+.chart-legends li:nth-child(5)::before {
+    color: #C62828;
+}
+
+/* Legend container styles */
+.chart-legends {
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+/* Hover effect for changing color */
+.chart-legends li:hover {
+    color: white;
+    background-color: transparent;
+}
+.defense-header{
+    margin-bottom: -10px;
+}
+
+.title1, .title2, .title3{
+    margin-left: 15px; /* Adjust the value as needed */
+}

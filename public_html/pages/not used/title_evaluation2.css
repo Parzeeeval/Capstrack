@@ -1,0 +1,98 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course-info,
+.semester-info {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.title-dropdown {
+    margin-bottom: 20px;
+}
+
+.title-dropdown label {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.title-dropdown select {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.Rationale-introduction {
+    background-color: #6BA3C1; 
+    padding: 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Rationale-introduction h3 {
+    font-size: 20px;
+    background-color: #6BA3C1; 
+    font-weight: 600;
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #000000; 
+    margin: 0; 
+}
+
+.bg-info {
+    border: 1px solid #000000;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: justify;
+    max-height: 300px; 
+    height: 1000px;
+    overflow-y: auto; 
+}
+.bg-info p {
+    margin-bottom: 15px; 
+    line-height: 1.6; 
+}
+
+
+
+.pagination {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    color: #1f6099;
+    text-decoration: none;
+}
+
+.pagination .current {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #1f6099; 
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}

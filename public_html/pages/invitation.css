@@ -1,0 +1,269 @@
+
+
+/* Modal container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); /* Background color */
+}
+.modal-content {
+    position: relative;
+    width: 80%; 
+    height: 80%; 
+    margin: auto; 
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.close-button {
+    position: absolute; 
+    right: 300px;  /* Moved further to the right */
+    top: 3px;    /* Adjusted vertical position */
+    font-size: 2rem;  /* Increased size */
+    color: pink;   /* Default color set to red */
+    cursor: pointer; 
+}
+
+.close-button:hover {
+    color: red; 
+}
+
+
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.panel-info {
+    font-weight: 600;
+    color: #666;
+    margin: 5px 0;
+}
+
+.paneltitle-info {
+    font-weight: 600;
+    color: #333;
+}
+
+.semester-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.semester-info {
+    color: #888;
+}
+
+.due-date-info {
+    color: #888;
+    text-align: right; 
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.left-side {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.right-side {
+    flex: 1;
+}
+
+.accepted-text {
+    margin-left: 10px; 
+    margin-top: -10px;
+    color: #41A763; 
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.not-accepted-text {
+    margin-left: 10px; 
+    margin-top: 10px;
+    color: #ff0000; 
+    font-weight: bold;
+      font-weight: bold;
+    font-size: 20px;
+}
+
+.document-template {
+    background-color: #f1f1f1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+   
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #066BA3;
+    width: 97.5%; /* Adjust this percentage or use px (e.g., 300px) */
+}
+
+
+.comments-section {
+    margin-bottom: 20px;
+}
+
+.comments-section label {
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.comments-section textarea {
+    width: 97.5%;
+    font-size: 16px;
+    height: 170px; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    font-family: 'Lexend', sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+    overflow-y: auto;
+}
+.button-send-container {
+    text-align: center;
+}
+
+.file-upload {
+    border: 2px dashed #ccc;
+    padding: 40px;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.file-upload label {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.file-upload i {
+    font-size: 30px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.file-display {
+    margin-top: -20px;
+}
+.panelist-info {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     
+}
+
+.panelist-info label {
+    font-weight: 700;
+    color: pink;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.panelist-info i {
+    font-size: 30px;
+    color: #666;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;       /* Make icon container a flexbox */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+}
+
+
+.panelist-info p {
+    margin: 0;
+    color: #333;
+    font-weight: 700;
+}
+
+.highlight{
+    color: #066BA3;
+  
+    cursor: pointer;
+}
+
+.fas {
+    color: #066BA3;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.panelist-info-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-send,
+.button-upload,
+.button-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.button-send {
+    background-color: #066BA3;
+}
+
+.button-upload {
+    background-color: #6c757d;
+}
+
+.button-submit {
+    background-color: #066BA3;
+}
+
+.button-send:hover,
+.button-upload:hover,
+.button-submit:hover {
+    opacity: 0.85;
+}
+
+.document-tracking {
+    font-weight: 700;
+    color: #41A763;
+    text-align: left;
+    margin-top: 130px;
+}

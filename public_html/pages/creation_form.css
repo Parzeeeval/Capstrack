@@ -1,0 +1,148 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+
+
+
+
+.divider {
+    height: 5px;  /* Adjust thickness */
+    background-color: #ccc;  /* Line color */
+    margin: 20px 0;  /* Adjust spacing around the line */
+    border: none;
+}
+
+.container {
+    background-color: white;
+    padding: 20px; /* Increased padding */
+    border-radius: 20px; /* Larger border-radius for a smoother look */
+    border: 2px solid white; /* Add black border */
+  
+    max-width: 1000px; /* Increased max-width */
+    width: 90%; /* Percentage width for responsiveness */
+    box-sizing: border-box; /* Includes padding and border in the container's width */
+    margin: 0 auto; /* Center the container */
+    justify-content: start;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: -20px; /* Increased margin for better spacing */
+    font-size: 30px; /* Larger font size */
+    color: black;
+}
+h4 {
+    text-align: center;
+    margin-bottom: -10px; /* Increased margin for better spacing */
+  
+    font-size: 22px; /* Larger font size */
+    color: black;
+}
+.optionDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Increased gap */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Increased margin */
+    font-size: 20px; /* Larger font size */
+    color: black;
+}
+
+input {
+    font-size: 20px; /* Larger font size */
+    padding: 10px; /* Increased padding */
+    border-radius: 5px; /* Larger border-radius */
+    border: 1px solid #ccc; /* Added border */
+    box-sizing: border-box; /* Includes padding and border in the input's width */
+    width: 100%; /* Full width to fit container */
+   
+    margin-bottom: 20px; /* Margin between inputs */
+}
+.button-group {
+    display: flex;
+    width: 100%; /* Full width to match form-group elements */
+    justify-content: flex-end; /* Align to the right */
+    margin-left: 95px;
+}
+
+.form-button {
+    color: white;
+    background-color: #066ba3;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #0c77b0;
+}
+
+
+select {
+    padding: 10px; /* Increased padding */
+    font-size: 20px; /* Larger font size */
+    border-radius: 5px; /* Larger border-radius */
+    margin-bottom: 30px; /* Increased margin */
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Includes padding and border in the select's width */
+    width: 100%; /* Full width to fit container */
+}
+
+select:focus {
+    border-color: #066ba3;
+    background-color: #fff;
+    outline: none;
+   
+}
+option:checked,
+option:focus {
+    background-color: #DF8F68; 
+    color: white; 
+}
+.container{
+                width: 800px;
+                
+            }
+            
+            #titleBoxID::placeholder {
+              font-size: 25px; /* Adjust the size as needed */
+            }
+                
+            input::placeholder { /* For modern browsers */
+                   color: white; 
+                font-size: 16px;
+                font-weight: bold;
+            }
+            
+            .textInput{
+                background-color: #D1642E; 
+                color: white; 
+                width: 100%;
+                font-size: 1.5em; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+            }
+            
+            

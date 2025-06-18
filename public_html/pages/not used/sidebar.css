@@ -1,0 +1,85 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    width: 60px;
+    height: 100vh;
+    background-color: #333;
+    transition: width 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu.expanded {
+    width: 200px;
+    align-items: flex-start;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+    transition: margin-left 0.3s;
+}
+
+#menu.expanded .logo {
+    margin-left: calc(50% - 20px); /* Center the logo when the sidebar is expanded */
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+.menu-inner {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#menu.expanded .menu-inner {
+    opacity: 1;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.menu-inner ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-inner ul li {
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left; /* Center the text within each menu item */
+    color: white;
+}
+
+h2 {
+    margin-left: 220px;
+    font-family: Arial, sans-serif;
+}

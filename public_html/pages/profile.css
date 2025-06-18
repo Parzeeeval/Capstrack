@@ -1,0 +1,172 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    background-color: #DEDEDE;
+}
+
+
+
+.profile-image {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 15px;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    border-radius: 50%; 
+}
+
+.profile-info {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center; 
+}
+
+.profile-info p {
+    margin: 0; 
+}
+
+.profile-info p:first-child {
+    font-weight: bold; 
+    font-size: 18px; 
+    margin-bottom: 5px; 
+}
+
+.profile-info p:nth-child(2),
+.profile-info p:nth-child(3) {
+    font-size: 16px;
+    color: #666;
+    margin: 2px 0; 
+}
+.profile-nav {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+.profile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.profile-nav li {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px; 
+}
+
+
+.profile-nav li i {
+    margin-right: 10px;
+    font-size: 18px; 
+    color: #666; 
+}
+
+.profile-nav li.active {
+    background-color: #E0E0E0;
+    color: #000000;
+    border-left: 3px solid #066BA3;
+    justify-content: flex-start; 
+}
+
+.profile-nav li:not(.active):hover {
+    background-color: #f0f0f0;
+}
+
+
+.profile-tabs {
+    display: flex;
+    border-bottom: 1px solid #DEDEDE;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 12px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.tabs .active {
+    border-bottom: 3px solid #066BA3;
+    color: #066BA3;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 12px;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[readonly] {
+    background-color: #EAEAEA;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-start; 
+    margin-top: 50px;
+}
+
+.edit-btn, .save-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+.edit-btn {
+    background-color: #333;
+}
+
+.save-btn {
+    background-color: #066BA3;
+}

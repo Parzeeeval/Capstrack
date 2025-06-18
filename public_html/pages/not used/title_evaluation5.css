@@ -1,0 +1,168 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+
+textarea{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.form-button {
+    color: white;
+    background-color: #066ba3;
+    font-size: 18px; /* Larger font size */
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 30px 15px 30px; /* Increased padding */
+    border-radius: 20px; /* Larger border-radius */
+    border:none;
+    margin:0 auto;
+    margin-bottom: 20px;
+    cursor: pointer; /* Pointer cursor for better UX */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course-info,
+.semester-info {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.title-dropdown {
+    margin-bottom: 20px;
+}
+
+.title-dropdown label {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.title-dropdown select {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.Evaluation-introduction {
+    background-color: #ffffff; 
+    padding: 0;
+    border: 1px solid #000000; 
+    border-top: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Evaluation-introduction h3 {
+    font-size: 20px;
+    background-color: #6BA3C1; 
+    font-weight: 600;
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.project-title {
+    background-color: #ffffff;
+    padding: 15px;
+    color: #929292;
+    margin: 0; 
+}
+
+.introduction-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.introduction-title label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 150px; 
+    margin-left: 150px;
+}
+
+.introduction-title input[type="radio"] {
+    display: none;
+}
+
+.custom-bullet {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px; 
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.introduction-title input[type="radio"]:checked + .custom-bullet {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+.introduction-title input[type="radio"]:checked + .custom-bullet.reject {
+    background-color: #f44336;
+    border-color: #f44336;
+}
+
+.introduction-title input[type="radio"]:checked + .custom-bullet.needs-improvement {
+    background-color: #ff9800;
+    border-color: #ff9800;
+}
+
+.bg-info {
+    border: 1px solid #000000;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: justify;
+    max-height: 300px; 
+    overflow-y: auto; 
+    height: 255px;
+}
+
+.bg-info p {
+    margin-bottom: 15px; 
+    line-height: 1.6; 
+    color: #888;
+}
+
+.pagination {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    color: #1f6099;
+    text-decoration: none;
+}
+
+.pagination .current {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #1f6099; 
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}

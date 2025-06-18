@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    background-color: #DEDEDE;
+}
+
+:root {
+    --sidebar-width: 80px;
+    
+    --content-left-spacing: 1%;
+    --content-right-spacing: 5%;
+}
+
+
+
+#topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #D1642E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#topbar .topbar-left {
+    display: flex;
+    align-items: center;
+}
+
+#topbar .logo {
+    width: 50px;
+    height: 50px;
+}
+
+#topbar .university-name {
+    color: white;
+    margin-left: 15px;
+    font-size: 17px;
+    line-height: 80px;
+    margin-top: 20px;
+}
+
+#topbar .topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+#topbar .notification-icon,
+#topbar .fa-user-circle {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#topbar .dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#topbar .dropdown button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#topbar .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 5px 5px 0px rgba(244, 244, 244, 0.2);
+    z-index: 1;
+}
+
+#topbar .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#topbar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+#topbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: var(--sidebar-width);
+    height: calc(100vh - 80px);
+    background-color: #272727;
+   
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    z-index: 1000;
+    align-items: center;
+}
+
+#menu.expanded {
+    width: var(--sidebar-expanded-width);
+    padding-right: 10px;
+}
+
+#menu .logo {
+    width: 60px;
+    height: 60px;
+    transition: width 0.3s, margin-left 0.3s;
+    margin-bottom: 20px;
+}
+
+#menu .university-name h2 {
+    font-size: 24px;
+}
+
+#menu.expanded .logo {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    margin-bottom: 20px;
+    transition: margin-left 0.3s;
+    z-index: 1;
+}
+
+#menu.expanded .hamburger {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+#menu .menu-inner {
+    flex: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#menu.expanded .menu-inner {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#menu .menu-inner ul {
+    list-style-type: none;
+    padding: 0;
+   
+    width: 105%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#menu .menu-inner ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#menu .menu-inner ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: inherit;
+}
+
+#menu .menu-inner ul li.logout {
+    margin-top: auto;
+}
+
+#menu .menu-inner ul li.logout i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+#menu .menu-inner ul li:hover {
+    background-color: #f1f1f1;
+}
+
+.menu-inner ul li a.active {
+    color: white;
+    background-color: #6A6873; /* Optional */
+    padding: 30px 40px; /* Increase padding for better visibility */
+}
+
+/* For the <a> or anchor tags */
+#menu .menu-inner ul li a {
+    display: flex;
+    align-items: center;
+    color: transparent; /* Make text transparent */
+   
+    text-decoration: none; /* Remove the underline */
+    width: 100%;
+    padding: 0px 15px;
+}
+
+#menu.expanded .menu-inner ul li a {
+    color: white;
+}
+
+/* Default state for icons */
+#menu .menu-inner ul li a i {
+    color: white; 
+   
+}
+
+/* Hover state for icons */
+#menu .menu-inner ul li a:hover i {
+    color: black;
+}
+
+/* Hover state for links (both text and icons) */
+#menu .menu-inner ul li a:hover {
+    color: black !important; 
+}
+
+/* Hover state for <li> items when not expanded */
+#menu.expanded .menu-inner ul li:hover a {
+    color: black !important; 
+}
+/* Hover state for <li> items when not expanded */
+#menu .menu-inner ul li:hover a {
+    color: transparent !important; 
+}
+#content {
+    margin-top: 75px;
+    margin-left: calc(var(--sidebar-width) + var(--content-left-spacing));
+    margin-right: var(--content-right-spacing);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    overflow-y: auto;
+    height: 79%;
+   
+}
+
+#menu.expanded ~ #content {
+    margin-left: calc(var(--sidebar-expanded-width) + var(--content-left-spacing));
+}
+
+footer {
+    background-color: #066BA3;
+    color: white;
+    text-align: center; /* Center the text */
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Ensure it is anchored to the left */
+    width: 100%;
+    min-height: 45px; /* Minimum height for the footer */
+    max-height: 45px; /* Maximum height for the footer */
+    padding: 5px 0; /* Vertical padding */
+    line-height: 1.5; /* Space between lines, can be adjusted */
+    z-index: 1000;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content overflow */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for p */
+    line-height: 40px; /* Center text vertically based on min-height */
+}
+
+@media (max-width: 1000px) {
+    footer {
+        display: none;
+    }
+}

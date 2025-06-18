@@ -1,0 +1,245 @@
+
+/* Main content layout */
+.invite-header {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 2rem; /* Increased size */
+}
+
+.invite-radio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased gap for better spacing */
+    margin-bottom: 25px;
+}
+
+.invite-label {
+    font-size: 1.2rem; /* Increased label size */
+    color: #34495e;
+ 
+}
+
+.invite-input-radio {
+    margin-right: 12px;
+}
+
+
+/* Hide the default radio buttons */
+.invite-input-radio-student,
+.invite-input-radio-faculty {
+    display: none; /* Hide native radio buttons */
+}
+
+/* Basic style for the custom bullets */
+.custom-bullet {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Outer circle */
+    margin-right: 10px;
+    border: 2px solid #ccc; /* Border color for outer circle */
+    background-color: white; /* Default background */
+    position: relative; /* For positioning inner circle */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transition for smooth color change */
+}
+
+/* Inner circle styles */
+.custom-bullet::after {
+    content: "";
+    position: absolute; /* Position relative to the outer circle */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 12px; /* Size of inner circle */
+    height: 12px;
+    border-radius: 50%; /* Make it a circle */
+    background-color: transparent; /* Default transparent */
+    transform: translate(-50%, -50%); /* Center the inner circle */
+    transition: background-color 0.3s ease; /* Smooth transition for the inner circle */
+}
+
+/* Checked state: change both inner and outer circle colors */
+.invite-input-radio-student:checked + .custom-bullet.student {
+    background-color: lightgreen; /* Outer circle color for student */
+    border-color: green; /* Border color for outer circle */
+}
+
+.invite-input-radio-faculty:checked + .custom-bullet.faculty {
+    background-color: lightcoral; /* Outer circle color for faculty */
+    border-color: red; /* Border color for outer circle */
+}
+
+/* Inner circle color based on which radio is selected */
+.invite-input-radio-student:checked + .custom-bullet.student::after {
+    background-color: green; /* Inner circle color for student */
+}
+
+.invite-input-radio-faculty:checked + .custom-bullet.faculty::after {
+    background-color: red; /* Inner circle color for faculty */
+}
+
+
+/* File input styling */
+.upload-box {
+    width: 250px;
+    height: 180px;
+    border: 2px dashed #b0b0b0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: #EAEAEA;
+}
+
+.invite-file-input {
+    display: none;
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    margin-bottom: 10px;
+    color: #066BA3;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+.invite-button {
+    background-color: #066BA3;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Increased button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.upload-button {
+    background-color: #41A763;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Increased button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.upload-button:hover {
+    background-color: #46845B;
+}
+.invite-button:hover {
+    background-color: #295872;
+}
+
+/* Table styling */
+.invite-table-container {
+    margin-top: 25px;
+    display: none; /* Hidden by default */
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 14px 18px; /* Larger padding for better spacing */
+    text-align: left;
+}
+
+th {
+    background-color:  #066BA3; /* Restored header color */
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem; /* Slightly larger for emphasis */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+td[contenteditable="true"]:focus {
+    background-color: #e0f7fa;
+}
+
+/* Section input styling */
+.invite-section-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.invite-section-input {
+    font-size: 1.2rem; /* Increased input size */
+    padding: 10px;
+    width: 270px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.invite-section-input:focus {
+    border-color: #3498db;
+}
+
+.invite-section-select {
+    font-size: 1.2rem; /* Increased size for consistency */
+    padding: 10px;
+    width: 290px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .invite-radio-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .invite-file-input,
+    .invite-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .invite-section-input,
+    .invite-section-select {
+        width: 100%;
+    }
+}
+
+/* Hide the Send Invite button initially */
+#sendInviteButton {
+    display: none; /* Initially hidden */
+}
+

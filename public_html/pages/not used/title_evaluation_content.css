@@ -1,0 +1,106 @@
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course-info,
+.semester-info {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.title-dropdown {
+    margin-bottom: 20px;
+}
+
+.title-dropdown label {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.title-dropdown select {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.section-introduction {
+    background-color: white; 
+    padding: 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.section-introduction h3 {
+    font-size: 20px;
+    background-color: #6BA3C1; 
+    font-weight: 600;
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #000000; 
+    margin: 0; 
+}
+
+.team-info {
+    border: 1px solid #000000;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: right;
+
+
+}
+
+.team-info p {
+    margin: 10px 0;
+    text-align: left;
+    margin-top: 30px;
+
+}
+
+
+.team-info a {
+    color: #1f6099;
+    text-decoration: none;
+}
+
+.team-members {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: -2px; 
+    text-align: left;
+}
+
+.team-members li {
+    margin-bottom: 5px;
+}
+
+.pagination .current {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #1f6099; 
+}
+.pagination {
+    text-align: right;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    color: #1f6099;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
